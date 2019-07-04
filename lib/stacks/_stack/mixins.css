@@ -1,0 +1,27 @@
+/* Stack layout, based on https://every-layout.dev/layouts/stack/ */
+
+@define-mixin stackVariables $space: 0 {
+
+  $stack-space: $space;
+
+  @define-mixin stackChild {
+    margin: 0;
+  }
+
+  @define-mixin stackChildSibling {
+    margin-top: $stack-space;
+  }
+}
+
+@define-mixin stackSelectors $selector: .stack {
+
+  $stack-selector: $selector;
+
+  $stack-selector > * {
+    @mixin stackChild;
+  }
+
+  $stack-selector  > * + * {
+    @mixin stackChildSibling;
+  }
+}

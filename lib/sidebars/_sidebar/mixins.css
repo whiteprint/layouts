@@ -1,0 +1,68 @@
+/* Sidebar layout, based on https://every-layout.dev/layouts/sidebar/ */
+
+@define-mixin sidebarVariables
+
+  $side: left,
+  $v-spacing: 1rem,
+  $h-spacing: 2rem,
+  $content-min-width: 50%,
+  $sidebar-width: notset {
+
+  $sidebar-side: $side;
+  $sidebar-v-spacing: $v-spacing;
+  $sidebar-h-spacing: $h-spacing;
+  $sidebar-content-min-width: $content-min-width;
+  $sidebar-sidebar-width: $sidebar-width;
+
+  @define-mixin sidebarContainer {
+    overflow: hidden;
+  }
+
+  @define-mixin sidebarAside {
+    margin: calc($sidebar-v-spacing / 2) calc($sidebar-h-spacing / 2);
+    flex-grow: 1;
+
+    @if $sidebar-sidebar-width != notset {
+      flex-basis: $sidebar-sidebar-width;
+    }
+  }
+
+  @define-mixin sidebarContent {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-width: calc($sidebar-content-min-width - $sidebar-h-spacing);
+  }
+
+  @define-mixin sidebarInner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc($sidebar-v-spacing / 2 * -1) calc($sidebar-h-spacing / 2 * -1);
+
+    @if $sidebar-side == right {
+      & > :first-child {
+        @mixin sidebarContent;
+      }
+    } @else {
+      & > :last-child {
+        @mixin sidebarContent;
+      }
+    }
+  }
+}
+
+@define-mixin sidebarSelectors $selector: .sidebar {
+
+  $sidebar-selector: $selector;
+
+  $sidebar-selector {
+    @mixin sidebarContainer;
+  }
+
+  $sidebar-selector > * {
+    @mixin sidebarInner;
+  }
+
+  $sidebar-selector > * > * {
+    @mixin sidebarAside;
+  }
+}

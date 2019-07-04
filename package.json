@@ -1,0 +1,29 @@
+{
+  "name": "@whiteprint/layouts",
+  "version": "0.1.0",
+  "description": "Layouts for Whiteprint, the CSS framework.",
+  "style": "index.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/whiteprint/layouts.git"
+  },
+  "author": {
+    "name": "Sam Smith",
+    "url": "https://smth.uk"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-preprocess": "^3.0.2"
+  },
+  "dependencies": {
+    "postcss-advanced-variables": "^3.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-mixins": "^6.2.1",
+    "postcss-nesting": "^7.0.0"
+  },
+  "homepage": "https://whiteprint.io/layouts"
+}

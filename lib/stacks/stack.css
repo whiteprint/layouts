@@ -1,0 +1,7 @@
+/* Whiteprint Layouts - Stack */
+
+@mixin stackVariables
+/*  1. vertical spacing ..... */  1rem;
+
+@mixin stackSelectors
+/*  1. container ............ */  .stack;
