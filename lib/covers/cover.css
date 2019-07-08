@@ -1,0 +1,10 @@
+/* Whiteprint Layouts - Cover */
+
+@mixin coverVariables
+/*  1. min height ........... */  100vh,
+/*  2. v spacing ............ */  2rem,
+/*  3. h spacing ............ */  2rem;
+
+@mixin coverSelectors
+/*  1. container ............ */  .cover,
+/*  2. centered ............. */  .cover_content;

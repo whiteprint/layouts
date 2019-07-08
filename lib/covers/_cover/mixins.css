@@ -1,0 +1,67 @@
+/* Cover layout, based on https://every-layout.dev/layouts/cover/ */
+
+@define-mixin coverVariables
+
+  $min-height,
+  $v-spacing: 0,
+  $h-spacing: 0 {
+
+  $cover-min-height: $min-height;
+  $cover-v-spacing: $v-spacing;
+  $cover-h-spacing: $h-spacing;
+
+  @define-mixin coverContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: $cover-min-height;
+    padding: $cover-v-spacing $cover-h-spacing;
+    box-sizing: border-box;
+  }
+
+  @define-mixin coverChild {
+    margin-top: $cover-v-spacing;
+    margin-bottom: $cover-v-spacing;
+  }
+
+  @define-mixin coverHeader {
+    margin-top: 0;
+  }
+
+  @define-mixin coverFooter {
+    margin-bottom: 0;
+  }
+
+  @define-mixin coverContent {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+@define-mixin coverSelectors
+
+  $container: .cover,
+  $centered: .cover_content {
+
+  $cover-container_selector: $container;
+  $cover-centered_selector: $centered;
+
+  $cover-container_selector {
+    @mixin coverContainer;
+  }
+
+  $cover-container_selector > * {
+    @mixin coverChild;
+  }
+
+  $cover-container_selector > :first-child:not($cover-centered_selector) {
+    @mixin coverHeader;
+  }
+
+  $cover-container_selector > :last-child:not($cover-centered_selector) {
+    @mixin coverFooter;
+  }
+
+  $cover-container_selector > $cover-centered_selector {
+    @mixin coverContent;
+  }
+}

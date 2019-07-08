@@ -1,3 +1,6 @@
+@import "../../lib/covers/_cover";
+@import "../../lib/covers/cover.css";
+
 @import "../../lib/sidebars/_sidebar";
 @import "../../lib/sidebars/sidebar.css";
 
