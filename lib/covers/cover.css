@@ -2,8 +2,8 @@
 
 @mixin coverVariables
 /*  1. min height ........... */  100vh,
-/*  2. v spacing ............ */  2rem,
-/*  3. h spacing ............ */  2rem;
+/*  2. v spacing ............ */  var(--layout-v-spacing),
+/*  3. h spacing ............ */  var(--layout-h-spacing);
 
 @mixin coverSelectors
 /*  1. container ............ */  .cover,

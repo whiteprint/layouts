@@ -2,8 +2,8 @@
 
 @mixin sidebarVariables
 /*  1. side ................. */  left,
-/*  2. v spacing ............ */  1rem,
-/*  3. h spacing ............ */  2rem,
+/*  2. v spacing ............ */  var(--layout-v-spacing),
+/*  3. h spacing ............ */  var(--layout-h-spacing),
 /*  4. content min width (%). */  50%,
 /*  5. sidebar width ........ */  notset; /* notset = use content width */
 
