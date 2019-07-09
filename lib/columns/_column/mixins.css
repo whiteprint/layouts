@@ -1,0 +1,47 @@
+/* Column layout */
+
+@define-mixin columnVariables
+
+  $min-width,
+  $v-spacing: 0,
+  $h-spacing: 0 {
+
+  $column-min-width: $min-width;
+  $column-v-spacing: $v-spacing;
+  $column-h-spacing: $h-spacing;
+
+  @define-mixin columnContainer {
+    /* overflow: hidden; */
+  }
+
+  @define-mixin columnInner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc($column-v-spacing /2 * -1) calc($column-h-spacing /2 * -1);
+  }
+
+  @define-mixin columnChild {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: $column-min-width;
+    margin: calc($column-v-spacing /2) calc($column-h-spacing /2);
+  }
+
+}
+
+@define-mixin columnSelectors $selector: .columns {
+
+  $column-selector: $selector;
+
+  /* $column-selector {
+    @mixin columnContainer;
+  } */
+
+  $column-selector > * {
+    @mixin columnInner;
+  }
+
+  $column-selector > * > *{
+    @mixin columnChild;
+  }
+}

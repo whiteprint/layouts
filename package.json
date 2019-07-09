@@ -1,6 +1,6 @@
 {
   "name": "@whiteprint/layouts",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Layouts for Whiteprint, the CSS framework.",
   "style": "index.css",
   "repository": {

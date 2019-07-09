@@ -1,0 +1,9 @@
+/* Whiteprint Layouts - Sidebar */
+
+@mixin columnVariables
+/*  1. min width ............ */  24ch,
+/*  2. v spacing ............ */  var(--layout-v-spacing),
+/*  3. h spacing ............ */  var(--layout-h-spacing);
+
+@mixin columnSelectors
+/*  1. container ............ */  .columns;

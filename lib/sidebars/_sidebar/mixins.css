@@ -15,7 +15,7 @@
   $sidebar-sidebar-width: $sidebar-width;
 
   @define-mixin sidebarContainer {
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   @define-mixin sidebarAside {
@@ -54,9 +54,9 @@
 
   $sidebar-selector: $selector;
 
-  $sidebar-selector {
+  /* $sidebar-selector {
     @mixin sidebarContainer;
-  }
+  } */
 
   $sidebar-selector > * {
     @mixin sidebarInner;
