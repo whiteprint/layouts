@@ -1,0 +1,30 @@
+/* Container layout */
+
+@define-mixin containerVariables
+
+  $max-width,
+  $center: true {
+
+  $container-max-width: $max-width;
+  $container-center: $center;
+
+  @define-mixin containerContainer {
+    max-width: $container-max-width;
+
+    @if $container-center == true {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+}
+
+@define-mixin containerSelectors $selector: .container {
+
+  $container-selector: $selector;
+
+  $container-selector {
+    @mixin containerContainer;
+  }
+
+}
