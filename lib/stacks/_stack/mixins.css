@@ -1,11 +1,24 @@
-/* Stack layout, based on https://every-layout.dev/layouts/stack/ */
+/* Stack layout, inspired by https://every-layout.dev/layouts/stack/ */
 
-@define-mixin stackVariables $space: 0 {
+@define-mixin stackVariables
+  $space: 0,
+  $t-padding: 0,
+  $b-padding: 0,
+  $l-padding: 0,
+  $r-padding: 0 {
 
   $stack-space: $space;
+  $stack-t-padding: $t-padding;
+  $stack-b-padding: $b-padding;
+  $stack-l-padding: $l-padding;
+  $stack-r-padding: $r-padding;
+
+  @define-mixin stackContainer {
+    padding: $stack-t-padding $stack-r-padding $stack-b-padding $stack-l-padding;
+  }
 
   @define-mixin stackChild {
-    margin: 0;
+    margin: 0 auto;
   }
 
   @define-mixin stackChildSibling {
@@ -16,6 +29,10 @@
 @define-mixin stackSelectors $selector: .stack {
 
   $stack-selector: $selector;
+
+  $stack-selector {
+    @mixin stackContainer;
+  }
 
   $stack-selector > * {
     @mixin stackChild;

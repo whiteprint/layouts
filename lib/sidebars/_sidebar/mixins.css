@@ -1,4 +1,4 @@
-/* Sidebar layout, based on https://every-layout.dev/layouts/sidebar/ */
+/* Sidebar layout, inspired by https://every-layout.dev/layouts/sidebar/ */
 
 @define-mixin sidebarVariables
 
@@ -6,16 +6,24 @@
   $v-spacing: 1rem,
   $h-spacing: 2rem,
   $content-min-width: 50%,
-  $sidebar-width: notset {
+  $sidebar-width: notset,
+  $t-padding: 0,
+  $b-padding: 0,
+  $l-padding: 0,
+  $r-padding: 0 {
 
   $sidebar-side: $side;
   $sidebar-v-spacing: $v-spacing;
   $sidebar-h-spacing: $h-spacing;
   $sidebar-content-min-width: $content-min-width;
   $sidebar-sidebar-width: $sidebar-width;
+  $sidebar-t-padding: $t-padding;
+  $sidebar-b-padding: $b-padding;
+  $sidebar-l-padding: $l-padding;
+  $sidebar-r-padding: $r-padding;
 
   @define-mixin sidebarContainer {
-    /* overflow: hidden; */
+    padding: $sidebar-t-padding $sidebar-r-padding $sidebar-b-padding $sidebar-l-padding;
   }
 
   @define-mixin sidebarAside {
@@ -54,9 +62,9 @@
 
   $sidebar-selector: $selector;
 
-  /* $sidebar-selector {
+  $sidebar-selector {
     @mixin sidebarContainer;
-  } */
+  }
 
   $sidebar-selector > * {
     @mixin sidebarInner;

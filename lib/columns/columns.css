@@ -1,9 +1,13 @@
 /* Whiteprint Layouts - Sidebar */
 
 @mixin columnVariables
-/*  1. min width ............ */  24ch,
+/*  1. min width ............ */  30ch,
 /*  2. v spacing ............ */  var(--layout-v-spacing),
-/*  3. h spacing ............ */  var(--layout-h-spacing);
+/*  3. h spacing ............ */  var(--layout-h-spacing),
+/*  4. padding top .......... */  var(--layout-v-padding),
+/*  5. padding bottom ....... */  var(--layout-v-padding),
+/*  6. padding left ......... */  var(--layout-h-padding),
+/*  7. padding right ........ */  var(--layout-h-padding);
 
 @mixin columnSelectors
 /*  1. container ............ */  .columns;

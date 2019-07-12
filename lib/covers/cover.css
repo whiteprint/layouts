@@ -3,7 +3,10 @@
 @mixin coverVariables
 /*  1. min height ........... */  100vh,
 /*  2. v spacing ............ */  var(--layout-v-spacing),
-/*  3. h spacing ............ */  var(--layout-h-spacing);
+/*  3. padding top .......... */  var(--layout-v-padding),
+/*  4. padding bottom ....... */  var(--layout-v-padding),
+/*  5. padding left ......... */  var(--layout-h-padding),
+/*  6. padding right ........ */  var(--layout-h-padding);
 
 @mixin coverSelectors
 /*  1. container ............ */  .cover,

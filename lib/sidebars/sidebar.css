@@ -5,7 +5,11 @@
 /*  2. v spacing ............ */  var(--layout-v-spacing),
 /*  3. h spacing ............ */  var(--layout-h-spacing),
 /*  4. content min width (%). */  50%,
-/*  5. sidebar width ........ */  notset; /* notset = use content width */
+/*  5. sidebar width ........ */  notset, /* notset = use content width */
+/*  6. padding top .......... */  var(--layout-v-padding),
+/*  7. padding bottom ....... */  var(--layout-v-padding),
+/*  8. padding left ......... */  var(--layout-h-padding),
+/*  9. padding right ........ */  var(--layout-h-padding);
 
 @mixin sidebarSelectors
 /*  1. container ............ */  .sidebar;

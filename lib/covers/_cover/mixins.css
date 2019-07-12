@@ -1,20 +1,26 @@
-/* Cover layout, based on https://every-layout.dev/layouts/cover/ */
+/* Cover layout, inspired by https://every-layout.dev/layouts/cover/ */
 
 @define-mixin coverVariables
 
   $min-height,
   $v-spacing: 0,
-  $h-spacing: 0 {
+  $t-padding: 0,
+  $b-padding: 0,
+  $l-padding: 0,
+  $r-padding: 0 {
 
   $cover-min-height: $min-height;
   $cover-v-spacing: $v-spacing;
-  $cover-h-spacing: $h-spacing;
+  $cover-t-padding: $t-padding;
+  $cover-b-padding: $b-padding;
+  $cover-l-padding: $l-padding;
+  $cover-r-padding: $r-padding;
 
   @define-mixin coverContainer {
     display: flex;
     flex-direction: column;
     min-height: $cover-min-height;
-    padding: $cover-v-spacing $cover-h-spacing;
+    padding: $cover-t-padding $cover-r-padding $cover-b-padding $cover-l-padding;
     box-sizing: border-box;
   }
 

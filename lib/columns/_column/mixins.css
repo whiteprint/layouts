@@ -4,14 +4,22 @@
 
   $min-width,
   $v-spacing: 0,
-  $h-spacing: 0 {
+  $h-spacing: 0,
+  $t-padding: 0,
+  $b-padding: 0,
+  $l-padding: 0,
+  $r-padding: 0 {
 
   $column-min-width: $min-width;
   $column-v-spacing: $v-spacing;
   $column-h-spacing: $h-spacing;
+  $column-t-padding: $t-padding;
+  $column-b-padding: $b-padding;
+  $column-l-padding: $l-padding;
+  $column-r-padding: $r-padding;
 
   @define-mixin columnContainer {
-    /* overflow: hidden; */
+    padding: $column-t-padding $column-r-padding $column-b-padding $column-l-padding;
   }
 
   @define-mixin columnInner {
@@ -33,9 +41,9 @@
 
   $column-selector: $selector;
 
-  /* $column-selector {
+  $column-selector {
     @mixin columnContainer;
-  } */
+  }
 
   $column-selector > * {
     @mixin columnInner;
