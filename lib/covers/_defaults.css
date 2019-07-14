@@ -1,0 +1,9 @@
+/* Layouts: Cover */
+:root {
+  --cover-min-height: 100vh;
+  --cover-v-spacing: var(--layout-v-spacing);
+  --cover-padding-top: var(--layout-v-padding);
+  --cover-padding-bottom: var(--layout-v-padding);
+  --cover-padding-left: var(--layout-h-padding);
+  --cover-padding-right: var(--layout-h-padding);
+}

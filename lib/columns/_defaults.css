@@ -1,0 +1,10 @@
+/* Layouts: Columns */
+:root {
+  --column-min-width: 30ch;
+  --column-v-spacing: var(--layout-v-spacing);
+  --column-h-spacing: var(--layout-h-spacing);
+  --column-padding-top: 0;
+  --column-padding-bottom: 0;
+  --column-padding-left: 0;
+  --column-padding-right: 0;
+}

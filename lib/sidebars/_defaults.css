@@ -1,0 +1,12 @@
+/* Layouts: Sidebar */
+:root {
+  --sidebar-side: left;
+  --sidebar-v-spacing: var(--layout-v-spacing);
+  --sidebar-h-spacing: var(--layout-h-spacing);
+  --sidebar-content-min-width: 50%;
+  --sidebar-sidebar-width: notset;
+  --sidebar-padding-top: 0;
+  --sidebar-padding-bottom: 0;
+  --sidebar-padding-left: 0;
+  --sidebar-padding-right: 0;
+}

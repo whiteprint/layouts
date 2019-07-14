@@ -2,6 +2,54 @@
 :root {
   --layout-v-spacing: 2rem;
   --layout-h-spacing: 2rem;
-  --layout-v-padding: 0;
+  --layout-v-padding: 2rem;
   --layout-h-padding: 2rem;
+}
+/* Layouts: Columns */
+:root {
+  --column-min-width: 30ch;
+  --column-v-spacing: var(--layout-v-spacing);
+  --column-h-spacing: var(--layout-h-spacing);
+  --column-padding-top: 0;
+  --column-padding-bottom: 0;
+  --column-padding-left: 0;
+  --column-padding-right: 0;
+}
+/* Layouts: Container */
+:root {
+  --container-max-width: 1170px;
+  --container-center: true;
+  --container-padding-top: 0;
+  --container-padding-bottom: 0;
+  --container-padding-left: var(--layout-h-padding);
+  --container-padding-right: var(--layout-h-padding);
+}
+/* Layouts: Cover */
+:root {
+  --cover-min-height: 100vh;
+  --cover-v-spacing: var(--layout-v-spacing);
+  --cover-padding-top: var(--layout-v-padding);
+  --cover-padding-bottom: var(--layout-v-padding);
+  --cover-padding-left: var(--layout-h-padding);
+  --cover-padding-right: var(--layout-h-padding);
+}
+/* Layouts: Sidebar */
+:root {
+  --sidebar-side: left;
+  --sidebar-v-spacing: var(--layout-v-spacing);
+  --sidebar-h-spacing: var(--layout-h-spacing);
+  --sidebar-content-min-width: 50%;
+  --sidebar-sidebar-width: notset;
+  --sidebar-padding-top: 0;
+  --sidebar-padding-bottom: 0;
+  --sidebar-padding-left: 0;
+  --sidebar-padding-right: 0;
+}
+/* Layouts: Stack */
+:root {
+  --stack-vertical-spacing: var(--layout-v-spacing);
+  --stack-padding-top: var(--layout-v-padding);
+  --stack-padding-bottom: var(--layout-v-padding);
+  --stack-padding-left: 0;
+  --stack-padding-right: 0;
 }

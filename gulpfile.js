@@ -4,10 +4,14 @@ const preprocess = require("gulp-preprocess");
 const postcssAdvancedVariables = require('postcss-advanced-variables');
 const browserSync = require('browser-sync').create();
 const postcssImport = require('postcss-import');
+const postcssCustomProperties = require('postcss-custom-properties');
 
 var CSSconfig = [
   postcssImport(),
   require('postcss-mixins'),
+  postcssCustomProperties({
+    preserve: false
+  }),
   postcssAdvancedVariables({
     disable: '@mixin, @include, @content, @import'
   }),

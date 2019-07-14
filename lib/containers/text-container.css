@@ -1,8 +1,0 @@
-/* Whiteprint Layouts - Container */
-
-@mixin containerVariables
-/*  1. max width ............ */  75ch,
-/*  2. center (true/false) .. */  false;
-
-@mixin containerSelectors
-/*  1. container ............ */  .text-container;

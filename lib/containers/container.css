@@ -1,8 +1,12 @@
 /* Whiteprint Layouts - Container */
 
 @mixin containerVariables
-/*  1. max width ............ */  1170px,
-/*  2. center (true/false) .. */  true;
+/*  1. max width ............ */  var(--container-max-width),
+/*  2. center (true/false) .. */  var(--container-center),
+/*  3. padding top .......... */  var(--container-padding-top),
+/*  4. padding bottom ....... */  var(--container-padding-bottom),
+/*  5. padding left ......... */  var(--container-padding-left),
+/*  6. padding right ........ */  var(--container-padding-right);
 
 @mixin containerSelectors
 /*  1. container ............ */  .container;

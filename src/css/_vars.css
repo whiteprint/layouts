@@ -2,6 +2,6 @@
 :root {
   --layout-v-spacing: 2rem;
   --layout-h-spacing: 2rem;
-  --layout-v-padding: 0;
+  --layout-v-padding: 2rem;
   --layout-h-padding: 2rem;
 }

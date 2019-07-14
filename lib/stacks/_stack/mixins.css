@@ -5,16 +5,24 @@
   $t-padding: 0,
   $b-padding: 0,
   $l-padding: 0,
-  $r-padding: 0 {
+  $r-padding: 0,
+  $min-height: initial {
 
   $stack-space: $space;
   $stack-t-padding: $t-padding;
   $stack-b-padding: $b-padding;
   $stack-l-padding: $l-padding;
   $stack-r-padding: $r-padding;
+  $stack-min-height: $min-height;
 
   @define-mixin stackContainer {
     padding: $stack-t-padding $stack-r-padding $stack-b-padding $stack-l-padding;
+
+    @if $stack-min-height != initial {
+      min-height: $stack-min-height;
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   @define-mixin stackChild {
@@ -23,6 +31,12 @@
 
   @define-mixin stackChildSibling {
     margin-top: $stack-space;
+
+    @if $stack-min-height != initial {
+      &:last-child {
+        margin-top: auto;
+      }
+    }
   }
 }
 

@@ -1,12 +1,12 @@
 /* Whiteprint Layouts - Cover */
 
 @mixin coverVariables
-/*  1. min height ........... */  100vh,
-/*  2. v spacing ............ */  var(--layout-v-spacing),
-/*  3. padding top .......... */  var(--layout-v-padding),
-/*  4. padding bottom ....... */  var(--layout-v-padding),
-/*  5. padding left ......... */  var(--layout-h-padding),
-/*  6. padding right ........ */  var(--layout-h-padding);
+/*  1. min height ........... */  var(--cover-min-height),
+/*  2. v spacing ............ */  var(--cover-v-spacing),
+/*  3. padding top .......... */  var(--cover-padding-top),
+/*  4. padding bottom ....... */  var(--cover-padding-bottom),
+/*  5. padding left ......... */  var(--cover-padding-left),
+/*  6. padding right ........ */  var(--cover-padding-right);
 
 @mixin coverSelectors
 /*  1. container ............ */  .cover,

@@ -8,10 +8,10 @@
 
 @import "../../lib/stacks/_stack";
 @import "../../lib/stacks/stack.css";
+@import "../../lib/stacks/page.css";
 
 @import "../../lib/columns/_column";
 @import "../../lib/columns/columns.css";
 
 @import "../../lib/containers/_container";
 @import "../../lib/containers/container.css";
-@import "../../lib/containers/text-container.css";

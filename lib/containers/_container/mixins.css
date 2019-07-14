@@ -3,13 +3,22 @@
 @define-mixin containerVariables
 
   $max-width,
-  $center: true {
+  $center: true,
+  $padding-top: 0,
+  $padding-bottom: 0,
+  $padding-left: 0,
+  $padding-right: 0 {
 
   $container-max-width: $max-width;
   $container-center: $center;
+  $container-padding-top: $padding-top;
+  $container-padding-bottom: $padding-bottom;
+  $container-padding-left: $padding-left;
+  $container-padding-right: $padding-right;
 
   @define-mixin containerContainer {
     max-width: $container-max-width;
+    padding: $container-padding-top $container-padding-right $container-padding-bottom $container-padding-left;
 
     @if $container-center == true {
       margin-left: auto;

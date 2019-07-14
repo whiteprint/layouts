@@ -1,0 +1,9 @@
+/* Layouts: Container */
+:root {
+  --container-max-width: 1170px;
+  --container-center: true;
+  --container-padding-top: 0;
+  --container-padding-bottom: 0;
+  --container-padding-left: var(--layout-h-padding);
+  --container-padding-right: var(--layout-h-padding);
+}

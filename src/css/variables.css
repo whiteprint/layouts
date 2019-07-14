@@ -1,1 +1,6 @@
 @import "_vars";
+@import "../../lib/columns/_defaults";
+@import "../../lib/containers/_defaults";
+@import "../../lib/covers/_defaults";
+@import "../../lib/sidebars/_defaults";
+@import "../../lib/stacks/_defaults";
