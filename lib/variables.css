@@ -48,8 +48,9 @@
 /* Layouts: Stack */
 :root {
   --stack-vertical-spacing: var(--layout-v-spacing);
-  --stack-padding-top: var(--layout-v-padding);
-  --stack-padding-bottom: var(--layout-v-padding);
+  --stack-padding-top: 0;
+  --stack-padding-bottom: 0;
   --stack-padding-left: 0;
   --stack-padding-right: 0;
+  --stack-min-height: initial;
 }
