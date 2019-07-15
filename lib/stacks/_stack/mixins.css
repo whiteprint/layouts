@@ -33,8 +33,8 @@
     margin-top: $stack-space;
 
     @if $stack-min-height != initial {
-      &:last-child {
-        margin-top: auto;
+      &:nth-last-child(2) {
+        flex-grow: 1;
       }
     }
   }
